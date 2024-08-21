@@ -7,11 +7,11 @@ handlers:
     class: logging.StreamHandler
     formatter: customFormatter
 loggers:
-  __main__:
+  sample:
     level: DEBUG
 
 root:
-  level: WARNING
+  level: INFO
   handlers: [consoleHandler]
 
 # Avoid disabling default logger　https://docs.djangoproject.com/ja/2.1/topics/logging/#configuring-logging
