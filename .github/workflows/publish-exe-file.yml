@@ -31,7 +31,7 @@ jobs:
           poetry run pyinstaller sample/__main__.py  --name sample --add-data "sample/data/logging.yaml:sample/data"
           ls dist/sample
           pushd dist
-          zip -r sample-windows.zip sample
+          Compress-Archive -Path dist/sample  -DestinationPath dist/sample-windows.zip
           popd
           
 
