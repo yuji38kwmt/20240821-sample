@@ -28,12 +28,13 @@ jobs:
       - name: Create executable file with pyinstaller and zip
         run: |
           poetry run pyinstaller sample/__main__.py  --name sample --add-data "sample/data/logging.yaml:sample/data"
-          Compress-Archive -Path dist\sample\  -DestinationPath dist\sample-windows.zip
+          zip -r  dist/sample-windows.zip dist/sample
+          
 
       - name: Upload a executable file to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            dist\sample-windows.zip
+            dist/sample-windows.zip
             
             
