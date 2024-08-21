@@ -27,7 +27,7 @@ jobs:
 
       - name: Create executable file with pyinstaller and zip
         run: |
-          poetry run pyinstaller sample\__main__.py  --name sample
+          poetry run pyinstaller sample/__main__.py  --name sample --add-data "sample/resources"
           Compress-Archive -Path dist\sample\  -DestinationPath dist\sample-windows.zip
 
       - name: Upload a executable file to GitHub Releases
