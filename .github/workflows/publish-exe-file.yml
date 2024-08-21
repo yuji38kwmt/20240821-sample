@@ -26,6 +26,7 @@ jobs:
           poetry install --only main,publish
 
       - name: Create executable file with pyinstaller and zip
+        shell: powershell
         run: |
           poetry run pyinstaller sample/__main__.py  --name sample --add-data "sample/data/logging.yaml:sample/data"
           ls dist/sample
