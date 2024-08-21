@@ -6,7 +6,6 @@ authors = ["yuji38kwmt"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pandas = "*"
 pyyaml = "*"
 
 [tool.poetry.group.publish]
